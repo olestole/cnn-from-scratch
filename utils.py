@@ -3,10 +3,6 @@ import matplotlib.pyplot as plt
 COLOR_MAP = 'YlGnBu'
 
 def display_images(images: list):
-    if len(images) == 1:
-        plt.imshow(images[0], cmap=COLOR_MAP)
-        return
-
     fig, axs = plt.subplots(1, len(images), figsize=(12, 12))
     for i in range(len(images)):
         axs[i].axis('off')
